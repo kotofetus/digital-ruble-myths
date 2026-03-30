@@ -195,7 +195,7 @@ body {
     line-height: 1.5;
 }
 
-/* ===== СТИЛИ ДЛЯ КАРТИНОК-ЗАГЛУШЕК ===== */
+/* ===== СТИЛИ ДЛЯ КАРТИНОК-ЗАГЛУШЕК (только для десктопа) ===== */
 .myth-image-placeholder {
     width: 100%;
     display: flex;
@@ -403,12 +403,13 @@ body {
     opacity: 1;
 }
 
-/* ===== АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ И ТЕЛЕФОНОВ ===== */
+/* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===== */
 @media (max-width: 768px) {
     body {
         padding: 1rem;
     }
     
+    /* 2 карточки в ряду на телефоне */
     .myth-row {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -424,6 +425,25 @@ body {
         gap: 0.4rem;
     }
     
+    /* Убираем картинки на телефоне */
+    .myth-image-placeholder {
+        display: none;
+    }
+    
+    /* Открытая карточка на телефоне занимает всю ширину */
+    .myth-row:has(.myth-card.open) {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .myth-row:has(.myth-card.open) .myth-card:not(.open) {
+        display: none;
+    }
+    
+    .myth-card.open {
+        width: 100%;
+    }
+    
     .myth-card.open .myth-content {
         padding: 0 1rem 1rem 1rem;
     }
@@ -434,10 +454,6 @@ body {
     
     .fact-block p, .metaphor-block p {
         font-size: 0.85rem;
-    }
-    
-    .myth-image {
-        border-radius: 12px;
     }
     
     .footer-card {
@@ -478,13 +494,16 @@ body {
         padding: 0.5rem 1rem;
         font-size: 0.75rem;
     }
-    
-    .myth-image-placeholder {
-        margin: 0.25rem 0;
-    }
 }
 
 /* ===== ДЛЯ БОЛЬШИХ ЭКРАНОВ (десктоп) ===== */
+@media (min-width: 769px) {
+    /* На десктопе картинки показываются */
+    .myth-image-placeholder {
+        display: flex;
+    }
+}
+
 @media (min-width: 1400px) {
     .container {
         max-width: 1400px;
