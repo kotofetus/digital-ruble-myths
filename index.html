@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Цифровой рубль: развеем мифы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>
+                Цифровой рубль: <span>развеем мифы</span>
+            </h1>
+            <p class="subtitle">
+                Интерактивная карта: миф → факт → метафора.<br>
+                Нажмите на любой миф, чтобы увидеть правду
+            </p>
+            <div class="badge">📌 Актуально на 2026 год</div>
+        </header>
+
+        <div class="myths-grid" id="mythsGrid"></div>
+
+        <div class="footer-card">
+            <div class="footer-text">
+                <h3>📲 Поделитесь картой с близкими</h3>
+                <p>Пусть друзья и родные тоже узнают правду о цифровом рубле.</p>
+                <button class="copy-link-btn" id="copyLinkBtn">
+                    📋 скопировать ссылку на карту
+                </button>
+            </div>
+            <div class="qr-container" id="qrContainer">
+                <img src="qr.jpg" alt="QR-код на карту" id="qrImage">
+                <p>Наведите камеру, чтобы открыть</p>
+            </div>
+        </div>
+
+        <!-- Блок официальных источников -->
+        <div class="sources-block">
+            <h4>📚 Официальные источники информации</h4>
+            <ul>
+                <li>🔹 <a href="https://cbr.ru/fintech/dr/" target="_blank" rel="noopener noreferrer">Банк России — Цифровой рубль</a></li>
+                <li>🔹 <a href="http://publication.pravo.gov.ru/document/0001202307240024?ysclid=mndq0g9eum582888793&index=1" target="_blank" rel="noopener noreferrer">Федеральный закон от 24.07.2023 № 340-ФЗ «О внесении изменений в отдельные законодательные акты»</a></li>
+                <li>🔹 <a href="https://cbr.ru/press/event/?id=24741" rel="noopener noreferrer">Банк России — О пилоте цифрового рубля</a></li>
+                <li>🔹 <a href="https://cbr.ru/Content/Document/File/177415/digital_ruble_30062025.pdf" target="_blank" rel="noopener noreferrer">Цифровой рубль: вопросы и ответы (PDF, ЦБ РФ)</a></li>
+            </ul>
+            <p class="sources-note">Все факты, представленные на карте, основаны на официальных данных Банка России и действующем законодательстве.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
